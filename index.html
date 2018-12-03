@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EOScatter Wallet</title>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<script src="node_modules\eosjs\lib\eos.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/eosjs@16.0.9/lib/eos.min.js"></script>-->
+<script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-core.min.js"></script>
+<script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-plugin-eosjs.min.js"></script>
+
+<script src="js/main.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                <h5 class="card-title text-center">EOScatter</h5>
+
+                 <!-- <form class="form-signin"> -->
+
+                    <div  style="display: none" id="loginDisplay">
+
+                        <div class="card-tokenInfo text-center">
+                            <label class="card-accountInfo text-center" id="accountname"></label> 
+                            <label class="card-accountInfo text-center" id="token"></label>
+                            <select name="tokenInfo" id="tokenInfo">
+                                <optgroup label="EOS">
+                                    <option value="EOS">EOS (eosio.token)</option>
+                                </optgroup>
+                                
+                                <optgroup label="MOON">
+                                    <option value="MOON">MOON (111111111zip)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <label hidden for="tokenAddress">tokenAddress</label>
+                        <input hidden type="text" class="form-control" id="tokenAddress" aria-describedby="tokenAddress" placeholder="tokenAddress" value="eosio.token">
+                        
+                        <label hidden for="symbolName">SYM</label>
+                        <input hidden type="text" class="form-control" id="symbolName" aria-describedby="symbolName" placeholder="SYM" value="EOS">
+
+                        <div class="form-label-group">
+                            <input type="text" id="to" class="form-control"  aria-describedby="to" placeholder="to" required autofocus>
+                            <label for="to">받는 사람 *</label>
+                        </div>
+
+                        <div class="form-label-group">
+                                <input type="number" id="quantity" class="form-control"  placeholder="quantity" required autofocus>             
+                                <label for="quantity">수량 *</label>
+                        </div>
+                                    
+                        <div class="form-label-group">
+                            <input type="text" id="memo" class="form-control" placeholder="memo" > 
+                            <label for="memo">메모</label>
+                        </div>
+                                
+                           <button class="btn btn-lg btn-eoscatter btn-block text-uppercase" onclick="transfer()">SEND</button> 
+                        
+                        <hr class="my-4">
+                            <button class="btn btn-lg btn-eoscatter btn-block text-uppercase" onclick="logout()"><img src='img/scatter_logout.png'/>Remove Identity</button>
+                    </div>
+                
+                    <div  style="display: block" id="logoutDisplay">
+                            <button class="btn btn-lg btn-eoscatter btn-block text-uppercase"onclick="login()"><img src='img/scatter.png'/>Scatter Identity</button> 
+                    </div>
+             <!-- </form>-->
+                </div>
+            </div>
+                <div class="text-trxSuccess" style="display: none" id="success">
+                    <label>SUCCESS</label>
+                    <div id="successMessage"></div>
+                </div>
+                <div class="text-trxError" style="display: none" id="error">
+                    <label>ERROR</label>
+                    <div id="errorMessage"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+</body>
+</html>
