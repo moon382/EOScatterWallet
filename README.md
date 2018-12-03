@@ -1,0 +1,2 @@
+# EOScatterWallet
+EOScatter Wallet
