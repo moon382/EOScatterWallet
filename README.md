@@ -67,7 +67,7 @@ URL : http://127.0.0.1:8080
 - Scatter의 "Identity Request" 창이 나타나면 원하는 계정을 선택 합니다.
 - "수락" 버튼을 클릭 하여 로그인 합니다.
 
-
+&nbsp;
 
 ![Alt text](img/3.png)
 
@@ -76,13 +76,13 @@ URL : http://127.0.0.1:8080
 - Scatter의 "Signature Request" 창이 나타나면, 입력 정보를 다시 한번 확인 합니다.
 - "수락" 버튼을 클릭하여, 코인을 전송합니다.
 
-
+&nbsp;
 
 ![Alt text](img/4.png)
 
 - 전송에 성공하면, 위와 같이 SUCCESS 메세지와 함께 트랜잭션 ID를 확인할 수 있습니다. 
 
-
+&nbsp;
 
 ![Alt text](img/5.png)
 
