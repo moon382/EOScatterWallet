@@ -5,7 +5,7 @@ const network = {
 	port:443,
 	protocol:'https'
 };
-
+//test
 ScatterJS.plugins( new ScatterEOS() );
 let scatter, eos;
 
